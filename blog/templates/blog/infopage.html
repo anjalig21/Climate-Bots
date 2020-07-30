@@ -1,0 +1,51 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../../media/img/other/caro4.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Eat for a Climate-stable Planet</h5>
+        <p>The diet you consume has a high factor on carbon emission rates. Eat green!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../../media/img/other/caro5.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Green Your Commute</h5>
+        <p>A typical passenger vehicle emits about 4.6 metric tons of carbon dioxide per year. Share transportation and ride green.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../../media/img/other/caro6.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Consume Less & Waste Less</h5>
+        <p>More than 8 million tons of plastic are dumped in our oceans every year. Let's make that change.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="ui-container">
+  <button class = "ui-btn ui-btn1"><a href="#">Clean Your Park</a></button>
+  <button class = "ui-btn ui-btn2"><a href="#">Climate Protests</a></button>
+  <button class = "ui-btn ui-btn3"><a href="#">Non-energy use transport</a></button>
+  <button class = "ui-btn ui-btn4"><a href="#">Use Less Water</a></button>
+  <button class = "ui-btn ui-btn5"><a href="#">Recycle</a></button>
+  <button class = "ui-btn ui-btn6"><a href="#">Educate a Friend</a></button>
+</div>
+  
+{% endblock%}

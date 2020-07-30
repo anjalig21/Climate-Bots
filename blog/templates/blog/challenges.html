@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div id="challenges-showcase">
+  <h1>Welcome to the climate bots educational platform!</h1>  
+  <h2>Want to participate in a fun trivia challenges to learn new skills and gain points?  </h2>
+  <p>Check out below for more information! </p>
+</div>     
+
+<div class="challenges-box">
+  <h2>Interactive Game </h2>
+  <p class="challenges-pfont">Here are a few trivia games to test your knowledge on a variety of climate topics; greenhouse gases, animal habitats, etc! </p>   
+  <img  src="https://cdn.glitch.com/60b3dfe5-0b0f-4542-8e91-2784fb4ddb43%2FScreen%20Shot%202020-07-18%20at%206.19.14%20PM.png?v=1595110880477" alt="Me" />
+  <div class="challenge-btncenter">
+    <button class="unique-btn"><a href="{% url 'blog-trivia' %}">Trivia</a></button>
+  </div>
+</div>  
+
+<div class="challenges-box">
+  <h2>Weekly Challenge</h2>
+  <p>Everyday week a new challenge will be posted on the website! Users must email us at climate.botss@gmail.com and will be entered into a raffle to win a prize sponsored by climate change non-profits! </p>
+  <p>Today, everyone must send a picture of them using a reusable waterball outside! </p>   
+  <img  src="https://cdn.glitch.com/60b3dfe5-0b0f-4542-8e91-2784fb4ddb43%2F1321_cc-vs-gw-vs-wx-768px.jpg?v=1595106715227" alt="Me" />
+  <form><input class="unique-btn" type="button" onclick="window.location.href='#';" value="Contact Us Page" /></form>
+</div> 
+{% endblock content %}

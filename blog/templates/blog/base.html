@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+  {% if title %}
+    <title>Climate Bots - {{ title }}</title>
+  {% else %}
+    <title>Climate Bots</title>
+  {% endif %}
+</head>
+<body>
+  <header>
+    <div class="nav-logo-container">
+      <img src="../../../media/img/logo.png"><!-- REPLACE WITH LOGO-->
+    </div>
+    
+    <nav class="nav-container">
+        <a href="{% url 'blog-home' %}">Home</a>
+        <a href="{% url 'blog-about' %}">About</a>
+      <!-- Navbar Right Side THIS WORKS IF USER IS LOGGED IN -->
+      {% if user.is_authenticated %}
+        <a href="{% url 'blog-uniqueideas' %}">Unique Ideas</a><!--LINKED-->
+        <a href="{% url 'blog-challenges' %}">Challenges</a> <!--LINKED-->
+        <a href="{% url 'blog-calendar' %}">Calendar</a>
+        <a href="{% url 'post-create' %}">New Post</a>
+        <a href="{% url 'blog-chat' %}">Chat</a>
+        <a href="{% url 'blog-contactform' %}">Contact Us</a>
+      {% endif %}
+    </nav>
+
+    <div class ="nav-right-container">
+      {% if user.is_authenticated %} <!-- WORKS IF USER IS LOGGED IN-->
+      <a class="nav-right" href="{% url 'profile' %}">Profile</a>
+      <a class="nav-right" href="{% url 'logout' %}">Logout</a>
+    {% else %}<!-- USER NOT LOGGED IN-->
+      <a class="nav-right" href="{% url 'login' %}">Login</a>
+      <a class="nav-right" href="{% url 'register' %}">Register</a>
+    {% endif %}
+    </div>
+  </header>
+  
+<main role="main" class="container">
+  <div>
+    <div>
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{message.tags}}">
+            {{message}}
+          </div> 
+        {%endfor%}
+      {% endif %}
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

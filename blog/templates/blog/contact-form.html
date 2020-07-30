@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<form class = "contact-form" action = "mailto: climate.botss@gmail.com" method = "post" enctype = "text/plain">
+  <h1> Contact Us </h1>
+  
+  <div class= "txtb">
+      <label> Full Name </label>
+      <input type = "text" name = "name" value = " " placeholder = "Enter Your Name">
+  </div>
+
+  <div class= "txtb">
+      <label> Email </label>
+      <input type = "email" name = "email" value = " ">
+  </div>
+
+  <div class= "txtb">
+      <label> Phone Number </label>
+      <input type = "text" name = "number" value = " " placeholder = "Enter Your Phone Number">
+  </div>
+
+  <div class= "txtb">
+      <label> Message </label>
+      <input type = "text" name = "message" value = " ">
+      <textarea> </textarea>
+  </div>
+
+  <a class = "cfbtn"> 
+      <button type = "submit" name = "submit"> SEND MAIL </button> </button> 
+  </a>
+
+</div>
+</form>
+
+{% endblock content %}
