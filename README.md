@@ -10,4 +10,5 @@ Requirements:
 
 cd location of file, (python manage.py makemigrations) (python manage.py migrate) (python manage.py runserver) 
 
-Now this project should be running on your localhost machine!  Thank you for viewing this project, Let's strive to save our home!  Climate Bots
+Now this project should be running on your localhost machine!  Thank you for viewing this project. Let's strive to save our home!  
+- Climate Bots
